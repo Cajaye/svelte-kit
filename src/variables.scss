@@ -1,0 +1,18 @@
+/* Variables and mixins declared here will be available in all other SCSS files */
+@mixin break($breakpoint) {
+	@if $breakpoint==laptop {
+		@media only screen and (min-width: 1025px) {
+			@content;
+		}
+	}
+	@if $breakpoint==tablet {
+		@media only screen and (min-width: 720px) {
+			@content;
+		}
+	}
+	@if $breakpoint==mobile {
+		@media only screen and (min-width: 480px) {
+			@content;
+		}
+	}
+}
